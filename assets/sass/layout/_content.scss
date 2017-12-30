@@ -1,0 +1,17 @@
+.content {
+  color: $color-white;
+  padding: 0.5rem;
+}
+
+.content--blue {
+  background: $color-blue;
+}
+.content__card {
+  padding: 1.5rem;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+}
+
+.content--center {
+  justify-content: center;
+  text-align: center;
+}

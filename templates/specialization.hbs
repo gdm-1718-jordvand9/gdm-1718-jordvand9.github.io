@@ -1,0 +1,14 @@
+<div class="fb-grid__col-12 page__header">
+  <div class="page__header__content">
+    <h1>{{departmentName}} <br> Specialization</h1>
+  </div>
+</div>
+<div class="fb-grid__col-12">
+  <div class="content content--blue content__card">
+    <h1>{{ specialization.name}}</h1>
+    <p>{{ specialization.description}}</p>
+  </div>
+</div>
+{{#each sepcialization.options}}
+<h2>{{name}}</h2>
+{{/each}}

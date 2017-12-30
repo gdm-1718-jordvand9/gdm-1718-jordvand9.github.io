@@ -1,0 +1,12 @@
+.page__header {
+  margin-top: 0.5rem;
+}
+.page__header__content {
+  background: linear-gradient(to right, $gradient-color-blue, $gradient-color-red);
+  h1 {
+    margin: 0;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    color: $color-white;
+  }
+}

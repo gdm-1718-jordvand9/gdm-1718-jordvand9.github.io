@@ -1,0 +1,35 @@
+.form {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.form__input {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid $color-white;
+  background: transparent;
+  color: $color-white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  &::placeholder {
+    color:$color-grey;
+  }
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+.form__information {
+  font-size: 0.7rem;
+  color: $color-white;
+  a {
+    
+    &:visited {
+      color: $color-white;
+    }
+  }
+}
+

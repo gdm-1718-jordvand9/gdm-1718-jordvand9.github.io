@@ -1,0 +1,22 @@
+{{!-- pages/index.hbs --}} {{#> layouts/base title="Register | Gradient" description="Register page for Gradient" pathToRoot="../"
+}} {{#*inline "head-block"}} {{/inline}} {{#*inline "content-block"}}
+
+<div class="fb-grid__container">
+  <div class="fb-grid__row content--center">
+    <div class="fb-grid__col-4 fb-grid__col-xs-12 fb-grid__col-sm-10 fb-grid__col-md-8 fb-grid__col-lg-7 fb-grid__col-xl-7">
+      <div class="content content--blue ">
+        <h1>Sign Up</h1>
+        <form class="form" action="">
+          <input id="name" type="text" name="name" placeholder="Displayname" class="form__input">
+          <input id="email" type="email" name="email" placeholder="Email" class="form__input">
+          <input id="password" type="password" name="password" placeholder="Password" class="form__input">
+          <a class="btn btn__default" href="#" id="btnRegister">Sign Up</a>
+          <p class="form__information" ><a href="/login">Already have an account? Sign in!</a></p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/inline}} {{#*inline "scripts-block"}} {{/inline}} {{/layouts/base}}

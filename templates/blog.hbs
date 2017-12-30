@@ -1,0 +1,24 @@
+ <div class="fb-grid__row">
+    <div class="fb-grid__col-12 page__header">
+      <div class="page__header__content">
+        <h1>
+          Blog
+          <br>
+          {{ this.departmentName }}
+        </h1>
+
+      </div>
+    </div>
+    {{#each articles}}
+    <div class="fb-grid__col-6 article-{{@key}}">
+      <div class="content content--blue content__card">
+        
+        <h1> {{ title }} </h1>
+        <p>
+          {{ body }}
+        </p>
+        <a href="/article?{{ ../this.departmentId }}&{{ @key }}" class="btn btn__default">Read More</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>

@@ -1,0 +1,79 @@
+<div class="fb-grid__col-12">
+  <div class="content content--blue content__card">
+    <h1> {{ detail.title }} </h1>
+    <p>
+      <strong>
+        {{ detail.synopsis}}
+      </strong>
+    </p>
+
+    <p>{{ detail.body}}</p>
+    <p>
+      <strong>Author:
+        <a href="/account?{{ detail.uid}}" class="link__reg">{{ detail.author}}</a>
+      </strong>
+      <br>
+      <strong>Department: {{ detail.departmentName }} </strong>
+      <br>
+      <strong>Specialization: {{detail.specializationName}}</strong>
+    </p>
+  </div>
+</div>
+<div class="fb-grid__col-12">
+  <div class="content content--blue content__card">
+    <a href="#" id="btnToggleFavorite" class="link__reg--hover">
+      <i class="{{#if detail.userLiked}} fas {{else }} far {{/if }}fa-heart fa-lg"> </i> Vind ik leuk
+    </a>
+    <p>
+      {{ detail.favoriteCountString }}
+    </p>
+  </div>
+</div>
+<div class="fb-grid__col-12">
+  <div class="fb-grid__row">
+    {{#each detail.images}}
+    <div class="fb-grid__col-3 fb-grid__col-xl-3 fb-grid__col-lg-4 fb-grid__col-md-6 fb-grid__col-sm-12 fb-grid__col-xs-12">
+      <div class="">
+        <img class="detail-image" src="{{this}}" alt="" data-id="{{this}}">
+      </div>
+    </div>
+    {{!-- image modal --}}
+    <div class="popup" data-id="popup-{{this}}">
+      <span class="popup__close" data-id="close-{{this}}">&times;</span>
+      <img id="{{this}}"  alt="" class="popup__image">
+    </div>
+    {{/each}}
+  </div>
+</div>
+</div>
+  <div class="fb-grid__col-12">
+    <div class="page__header">
+      <div class="page__header__content">
+        <h1>Comments on this project</h1>
+      </div>
+
+    </div>
+  </div>
+  <div class="fb-grid__col-12">
+    <div class="fb-grid__row commentContainer">
+      {{#each comments}}
+      <div class="fb-grid__col-6 fb-grid__col-xs-12 fb-grid__col-sm-12">
+        <div class="content content--blue content__card">
+          <div class="fb-grid__row">
+            <div class="fb-grid__col-11">
+              <p title="{{ formattedDate }}">
+                <strong>{{ author }}</strong> posted {{ timeAgo }}</p>
+              <p>{{ text }}</p>
+            </div>
+            <div class="fb-grid__col-1 deleteCommentContainer">
+              {{#if currentUserComment}}
+              <a href="#" data-id="{{ @key }}" class="btnCommentDelete link__reg link--none">X</a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {{/each}}
+    </div>
+  </div>

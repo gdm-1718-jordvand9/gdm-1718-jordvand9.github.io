@@ -1,0 +1,25 @@
+<div class="fb-grid__col-12">
+  <div class="content content--blue content__card">
+    <h1>{{ this.article.title }}</h1>
+    <p>
+      <strong>
+        {{ this.article.body }}
+      </strong>
+    </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nunc at metus ornare porttitor. In cursus nibh
+      ac imperdiet sollicitudin. Ut scelerisque turpis at nulla varius volutpat. Suspendisse quis turpis eget erat fermentum
+      luctus. Aliquam non magna nec velit varius hendrerit ac eget ex. Ut metus magna, ultricies in arcu a, dignissim volutpat
+      risus. Curabitur quis laoreet erat. Morbi commodo felis ac ipsum sodales finibus. Duis lacinia interdum consectetur.
+      Mauris nec nulla consequat, consectetur leo sit amet, tincidunt nisi. Duis eget vehicula arcu, sit amet auctor mauris.
+      Mauris pretium mi quis nulla ornare, congue gravida justo eleifend.</p>
+    <p>
+      <strong>Author: {{ this.article.author }}</strong>
+      <br>
+      <strong>Department: {{ this.departmentName }}</strong>
+    </p>
+    {{#each this.article.tags}}
+    <a href="" class="btn btn__tag">#{{ @key }}</a>
+    {{/each }}
+  </div>
+</div>

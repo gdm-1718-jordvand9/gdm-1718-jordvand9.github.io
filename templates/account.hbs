@@ -1,0 +1,29 @@
+<div class="fb-grid__col-12">
+  <div class="content content--blue content__card">
+    <h1>{{ user.name }}</h1>
+    <p>This user joined {{ user.timeAgo }}</p>
+    <p>
+      <strong>{{ user.followerCount}}</strong> followers -
+      <strong>{{ user.followingCount}}</strong> following</p>
+    <p></p>
+    <a href="#" id="btnFollow" class="btn btn__default"> {{#if user.isFollowing}}Unfollow {{else}} Follow{{/if}}</a>
+  </div>
+</div>
+{{#each projects}}
+<div class="fb-grid__col-6 fb-grid__col-sm-12 fb-grid__col-xs-12 fb-grid__col-md-6 fb-grid__col-lg-6">
+  <div class="project-image" style="background-image: url({{#each images}}{{#if @first}}{{this}}{{/if}}{{/each}})">
+    <a href="/detail?{{ @key }}" class="project-card__link">
+      <div class="fb-grid__row project__card">
+        <div class="fb-grid__col-12 project__card--date">
+          <h4>
+            <span>{{formattedDate}}</span>
+          </h4>
+        </div>
+        <div class="fb-grid__col-12 project__card--title">
+          <h2>{{ title }}</h2>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+{{/each}}

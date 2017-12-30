@@ -1,0 +1,54 @@
+.project__card {
+  align-content: space-between;
+  height: 350px;
+  padding: 0.5rem;
+  h4,
+  h2 {
+    margin: 0;
+    color: $color-white;
+  }
+}
+
+.project-card__link {
+  text-decoration: none;
+  h2:hover{
+    text-decoration: underline
+  }
+}
+
+.project__card--date {
+  span {
+    background: $gradient-color-green;
+    background: -webkit-linear-gradient(left, $gradient-color-green, $gradient-color-cyan);
+    background: -o-linear-gradient(right, $gradient-color-green, $gradient-color-cyan);
+    background: -moz-linear-gradient(right, $gradient-color-green, $gradient-color-cyan);
+    background: linear-gradient(to right, $gradient-color-green, $gradient-color-cyan);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.project__card--title {
+  h2 {
+    background: $gradient-color-blue;
+    background: -webkit-linear-gradient(left, $gradient-color-blue, $gradient-color-red);
+    background: -o-linear-gradient(right, $gradient-color-blue, $gradient-color-red);
+    background: -moz-linear-gradient(right, $gradient-color-blue, $gradient-color-red);
+    background: linear-gradient(to right, $gradient-color-blue, $gradient-color-red);
+    padding: 0.5rem 1rem;
+  }
+}
+
+.project-image {
+  background: $color-grey;
+  background-size: 102%;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-size: 100%;
+    h2{
+      text-decoration: underline;
+    }
+    
+  }
+}

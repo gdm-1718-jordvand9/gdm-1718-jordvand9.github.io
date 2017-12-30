@@ -1,0 +1,92 @@
+<div class="fb-grid__col-12">
+  <h1>Department management</h1>
+</div>
+<div class="fb-grid__col-12">
+  <div class="fb-grid__row departmentContainer">
+    {{#each departments}}
+    <div class="fb-grid__col-12 department-${departmentId}">
+      <div class="content content--blue content__card">
+        <h3>{{ name }}</h3>
+        <p>Created : {{ formattedDate}}</p>
+        <a href="#" class="btn btn__default btn--red btnSoftDeleteDepartment" data-id="{{ @key }}">{{#if visible }} Soft delete {{else}} Soft undelete{{/if}}</a>
+        <a href="#" class="btn btn__default btn--red btnDepartmentHardDelete" data-id="{{ @key }}">Hard Delete</a>
+      </div>
+    </div>
+    {{#each specializations}}
+    <div class="fb-grid__col-6">
+      <div class="content content--blue content__card">
+        <p><strong>{{ name }}</strong></p>
+        <a href="#" class="btn btn__default btn--red btnSpecializationSoftDelete" data-specializationid="{{ @key }}" data-departmentid="{{ @../key}}">{{#if visible }} Soft delete {{else}} Soft undelete{{/if}}</a>
+        <a href="#" class="btn btn__default btn--red btnSpecializationHardDelete" data-specializationid="{{ @key }}" data-departmentid="{{ @../key}}">Hard Delete</a>
+      </div>
+    </div>
+    {{/each}} {{/each }}
+  </div>
+  <div class="content content--blue content__card">
+    <h1>Create a department</h1>
+    <input class="form__input" type="text" placeholder="NAME" id="departmentName">
+    <textarea class="form__input" name="" id="departmentDescription" cols="30" rows="10" placeholder="DESCRIPTION"></textarea>
+    <input class="form__input" type="text" placeholder="ADDRESS" id="departmentAddress">
+    <input class="form__input" type="text" placeholder="FACEBOOK URL" id="departmentFacebookUri">
+    <input class="form__input" type="text" placeholder="INSTAGRAM URL" id="departmentInstagramUri">
+    <input class="form__input" type="text" placeholder="TWITTER URL" id="departmentTwitterUri">
+    <a href="#" class="btn btn__default" id="btnCreateDepartment">Submit</a>
+  </div>
+</div>
+<div class="fb-grid__col-12">
+  <div class="content content--blue content__card">
+    <h1>Create a specialization</h1>
+    <input class="form__input" type="text" placeholder="NAME" id="specializationName">
+    <select class="form__input" name="" id="specializationDepartment"></select>
+    <textarea class="form__input" name="" id="specializationDescription" cols="30" rows="10" placeholder="DESCRIPTION"></textarea>
+    <a href="#" class="btn btn__default" id="btnCreateSpecialization">Submit</a>
+  </div>
+</div>
+<div class="fb-grid__col-12">
+  <h1>Blog management</h1>
+</div>
+
+<div class="fb-grid__col-12">
+  <div class="fb-grid__row blogContainer">
+    {{#each blog}}
+    <div class="fb-grid__col-12 blog-${departmentId}">
+      <div class="content content--blue content__card">
+        <h1>{{ @key }}</h1>
+      </div>
+      <div class="fb-grid__row articleContainer${departmentId}"></div>
+    </div>
+    {{#each this}}
+    <div class="fb-grid__col-6">
+      <div class="content content--blue content__card">
+        <h3>{{ title }}</h3>
+        <a href="#" class="btn btn__default btn--red btnSoftDeleteArticle" data-articleid="{{ @key }}" data-departmentid="{{ @../key}}">{{#if visible }} Soft delete {{else}} Soft undelete{{/if}}</a>
+        <a href="#" class="btn btn__default btn--red btnArticleHardDelete" data-articleid="{{ @key }}" data-departmentid="{{ @../key}}">Hard Delete</a>
+      </div>
+    </div>
+    {{/each }} {{/each }}
+  </div>
+  <div class="content content--blue content__card">
+    <h1>Create a blogpost</h1>
+    <input class="form__input" type="text" placeholder="TITLE" id="articleTitle">
+    <select class="form__input" name="" id="articleDepartment"></select>
+    <textarea class="form__input" name="" id="articleBody" cols="30" rows="10" placeholder="BODY"></textarea>
+    <input class="form__input" type="text" placeholder="TAGS, seperate by spaces" id="articleTags">
+    <a href="#" class="btn btn__default" id="btnCreateArticle">Submit</a>
+  </div>
+</div>
+<div class="fb-grid__col-12">
+  <h1>Project management</h1>
+</div>
+<div class="fb-grid__col-12">
+  <div class="fb-grid__row">
+    {{#each projects}}
+    <div class="fb-grid__col-6">
+      <div class="content content--blue content__card">
+        <h3>{{ title }}</h3>
+        <a href="#" class="btn btn__default btn--red btnProjectSoftDelete" data-projectid="{{ @key }}" data-authorid="{{ uid }}">{{#if visible }} Soft delete {{else}} Soft undelete{{/if}}</a>
+        <a href="#" class="btn btn__default btn--red btnProjectHardDelete" data-projectid="{{ @key }}" data-authorid="{{ uid }}">Hard Delete</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

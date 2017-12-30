@@ -1,0 +1,16 @@
+{{#each this}}
+<div class="fb-grid__col-4 fb-grid__col-sm-12 fb-grid__col-xs-12 fb-grid__col-md-6 fb-grid__col-lg-6 project-image-parent">
+  <div class="project-image" style="background-image: url({{#each images}}{{#if @first}}{{this}}{{/if}}{{/each}})">
+    <a href="/detail?{{ id }}" class="project-card__link">
+    <div class="fb-grid__row project__card ">
+      <div class="fb-grid__col-12 project__card--date">
+        <h4><span>{{ author}}</span></h4>
+      </div>
+      <div class="fb-grid__col-12 project__card--title">
+         <h2>{{ title }}</h2>  
+      </div>
+    </div>
+    </a>
+  </div>
+</div>
+{{/each}}

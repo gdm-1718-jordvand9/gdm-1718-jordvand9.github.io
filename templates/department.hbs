@@ -1,0 +1,59 @@
+{{#each this}}
+<div class="fb-grid__col-12 ">
+  <div class="content content--blue content__card">
+    <h1>{{ name }}</h1>
+    <p>{{ description }}</p>
+    <table>
+      <tr>
+        <td width="10%">
+          <strong>Adres</stong>
+        </td>
+        <td>{{ address }}</td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Telefoon</strong>
+        </td>
+        <td>09 342 81 23</td>
+      </tr>
+      {{#if specializations}}
+      <tr>
+        <td>
+          <strong>Specialisaties</strong>
+        </td>
+        <td>{{#each specializations}} 
+          <a href="/specialization?{{@../key}}&{{@key}}" class="link__reg">{{name}}</a>
+          <br> {{/each}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong><a href="/blog?{{ @key }}" class="link__reg">Blog</a></strong>
+        </td>
+      </tr>
+      {{/if}}
+    </table>
+    <div class="fb-grid__row">
+      <div class="fb-grid__col-6">
+        <strong>Connect</strong>
+      </div>
+      <div class="fb-grid__col-6 social__container">
+        <div class="btn__social">
+          <a href="{{ facebookUri }}">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+        <div class="btn__social">
+          <a href="{{ twitterUri }}">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <div class="btn__social">
+          <a href="{{ instagramUri }}">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>{{/each}}

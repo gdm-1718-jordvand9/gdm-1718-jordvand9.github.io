@@ -1,0 +1,36 @@
+.styleguide__color--1 {
+  background-color: $color-white;
+}
+
+.styleguide__color--2 {
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.styleguide__color--3 {
+  background-color: $color-blue;
+  color: $color-white;
+}
+
+.styleguide__color--4 {
+  background-color: $color-grey;
+}
+.styleguide__color--5 {
+  background: linear-gradient(to right, $gradient-color-blue, $gradient-color-red);
+  color: $color-white;
+}
+.styleguide__color--6 {
+  background: linear-gradient(to right, $gradient-color-green, $gradient-color-cyan);
+  color: $color-white;
+}
+.styleguide__color {
+  h4,
+  p {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+  }
+}
+
+
